@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8;
+}
+
+body section {
+  margin: 18% 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vh;
+  background-color: white;
+}
+
+body section .leftside {
+  width: 40%;
+  overflow: hidden;
+}
+
+body section .leftside img {
+  height: 100%;
+  position: relative;
+}
+
+body section .rightside {
+  width: 65%;
+}
+
+body section .rightside h1 {
+  padding: 40px 40px 20px 40px;
+  color: #48556a;
+}
+
+body section .rightside .entrytext {
+  padding: 0px 40px;
+  color: #9eafc2;
+}
+
+body section .rightside .namecard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body section .rightside .namecard img {
+  margin: 20px 10px 20px 40px;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+body section .rightside .namecard .person {
+  margin: 20px 0;
+}
+
+body section .rightside .namecard .person .name {
+  color: #48556a;
+  font-weight: 700;
+}
+
+body section .rightside .namecard .person .date {
+  color: #9eafc2;
+}
+
+body section .rightside .namecard button {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin: 30px 40px auto auto;
+  background-image: url("../images/icon-share.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  z-index: 1;
+}
+
+body section .rightside .namecard button:hover ~ .sharebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body section .rightside .namecard .sharebox {
+  display: none;
+  position: absolute;
+  right: 20%;
+  top: 44.5%;
+  height: 3.5rem;
+  background-color: #48556a;
+  border-radius: 15px;
+}
+
+body section .rightside .namecard .sharebox p {
+  color: #9eafc2;
+  padding-left: 30px;
+  padding-right: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 6px;
+}
+
+body section .rightside .namecard .sharebox img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 5px;
+  border-radius: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  padding-right: 17px;
+}
+
+body section .rightside .namecard .sharebox .pointer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 46%;
+  top: 80%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #48556a;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 1362px) {
+  section {
+    border-radius: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 20% 10% !important;
+    border-radius: 15px;
+  }
+  section .leftside {
+    width: 100% !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  section .leftside img {
+    height: 300px !important;
+  }
+  section .rightside {
+    width: 100% !important;
+  }
+  section .rightside h1 {
+    font-size: 14px;
+  }
+  section .rightside .namecard:hover .sharebox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 75px;
+    right: auto;
+    top: 66%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  section .rightside .namecard:hover .sharebox p {
+    margin-left: 40px;
+    margin-right: 0;
+    padding: 0;
+  }
+  section .rightside .namecard:hover .sharebox img {
+    padding: 2px;
+  }
+  section .rightside .namecard:hover .sharebox .pointer {
+    display: none;
+  }
+  section .rightside .namecard:hover button {
+    background-color: #6d7f97;
+  }
+  section .rightside .namecard button:hover ~ .sharebox {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

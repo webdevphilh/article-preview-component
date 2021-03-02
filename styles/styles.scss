@@ -1,0 +1,180 @@
+$veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$desaturatedDarkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+
+    background-color: $lightGrayishBlue;
+
+    section{
+        margin: 18% 25%;
+        display: flex;
+        height: 30vh;
+        background-color: white;
+
+        .leftside{
+            width: 40%;
+            overflow: hidden;
+            img{
+                height: 100%;
+                position: relative;
+            }
+        }
+
+        .rightside{
+            width: 65%;
+            h1 {
+                padding: 40px 40px 20px 40px;
+                color: $veryDarkGrayishBlue;
+            }
+            .entrytext{
+                padding: 0px 40px;
+                color: $grayishBlue;
+            }
+            .namecard{
+                display: flex;
+                width: 100%;
+                img{
+                    margin: 20px 10px 20px 40px;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                }
+                .person{
+                    margin: 20px 0;
+                    .name{
+                        color: $veryDarkGrayishBlue;
+                        font-weight: 700;
+                    }
+                    .date{
+                        color: $grayishBlue;
+                    }
+                }
+                button{
+                    border-radius: 50%;
+                    height: 2rem;
+                    width: 2rem;
+                    margin: 30px 40px auto auto;
+                    background-image: url("../images/icon-share.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border: none;
+                    z-index: 1;
+
+                    &:hover ~ .sharebox{
+                        display: flex;
+                    }
+                }
+                .sharebox{
+                    display: none;
+                    position:absolute;
+                    right: 20%;
+                    top: 44.5%;
+                    height: 3.5rem;
+                    background-color: $veryDarkGrayishBlue;
+                    border-radius: 15px;
+                    p{
+                        color: $grayishBlue;
+                        padding-left: 30px;
+                        padding-right: 15px;
+                        align-self: center;
+                        letter-spacing: 6px;
+                    }
+                    img{
+                        align-self: center;
+                        margin: 5px;
+                        border-radius: 0;
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        padding-right: 17px;
+                        }
+                        .pointer{
+                            display: flex;
+                            position:absolute;
+                            right: 46%;
+                            top: 80%;
+                            transform:rotate(45deg);
+                            background-color: $veryDarkGrayishBlue;
+                            width: 20px;
+                            height: 20px;
+                        }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1362px){
+    *{
+        //border: 1px solid greenyellow;
+    }
+
+    section{
+        border-radius: 10px;
+        flex-wrap: wrap;
+        height: fit-content !important;
+        justify-content: center;
+        margin: 20% 10% !important;
+        border-radius: 15px;
+
+        .leftside{
+            width: 100% !important;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+
+            img{
+                height: 300px !important;
+            }
+        }
+
+        .rightside{
+            width: 100% !important;
+            h1{
+                font-size: 14px;
+            }
+            .namecard{
+                //border: 1px solid greenyellow;
+                &:hover .sharebox{
+                    display: flex;
+                    width: 80%;
+                    height: 75px;
+                    right: auto;
+                    top: 66%;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+
+                    p{
+                        margin-left: 40px;
+                        margin-right: 0;
+                        padding: 0;
+                    }
+                    img{
+                        padding: 2px;
+                    }
+
+                    .pointer{
+                        display: none;
+                    }
+                }
+
+                &:hover button{
+                    background-color: $desaturatedDarkBlue;
+                }
+
+                button{
+                    &:hover ~ .sharebox{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
